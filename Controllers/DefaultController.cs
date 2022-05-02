@@ -16,5 +16,47 @@ namespace CV_MVC.Controllers
             var values = db.TBLABOUT.ToList();
             return View(values);
         }
+
+        public PartialViewResult About()
+        {
+            var obj = db.TBLABOUT.ToList();
+            return PartialView(obj);
+        }
+
+        public PartialViewResult Experience()
+        {
+            var experiences = db.TBLEXPERIENCE.ToList();
+            return PartialView(experiences);
+        }
+
+        public PartialViewResult Education()
+        {
+            var edu = db.TBLEDUCATION.ToList();
+            return PartialView(edu);
+        }
+
+        public PartialViewResult Skill()
+        {
+            var skill = db.TBLSKILL.ToList();
+            return PartialView(skill);
+        }
+
+        public PartialViewResult Hobby()
+        {
+            var obj = db.TBLHOBBY.ToList();
+            return PartialView(obj);
+        }
+
+        public PartialViewResult Certificates()
+        {
+            var obj = db.TBLCERTIFICATES.ToList();
+            return PartialView(obj);
+        }
+
+        public PartialViewResult Contact()
+        {
+            var obj = db.TBLCONTACT.ToList();
+            return PartialView(obj);
+        }
     }
 }
