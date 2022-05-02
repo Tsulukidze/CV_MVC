@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbCVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBLABOUT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Surname" Type="varchar" MaxLength="50" />
+    <Property Name="Adress" Type="varchar" MaxLength="150" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Details" Type="varchar(max)" />
+    <Property Name="Photo" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TBLADMIN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLCERTIFICATES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DETAIL" Type="varchar" MaxLength="320" />
+  </EntityType>
+  <EntityType Name="TBLCONTACT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="varchar" MaxLength="120" />
+    <Property Name="Email" Type="varchar" MaxLength="80" />
+    <Property Name="Subject" Type="varchar" MaxLength="120" />
+    <Property Name="Message" Type="varchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+  </EntityType>
+  <EntityType Name="TBLEDUCATION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="varchar" MaxLength="150" />
+    <Property Name="SubHeader1" Type="varchar" MaxLength="150" />
+    <Property Name="SubHeader2" Type="varchar" MaxLength="150" />
+    <Property Name="GPA" Type="varchar" MaxLength="20" />
+    <Property Name="Date" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBLEXPERIENCE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="varchar" MaxLength="150" />
+    <Property Name="SubHeader" Type="varchar" MaxLength="150" />
+    <Property Name="Details" Type="varchar(max)" />
+    <Property Name="Date" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TBLHOBBY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Detail1" Type="varchar" MaxLength="620" />
+    <Property Name="Detail2" Type="varchar" MaxLength="620" />
+  </EntityType>
+  <EntityType Name="TBLSKILL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Skill" Type="varchar" MaxLength="120" />
+  </EntityType>
+  <EntityContainer Name="DbCVModelStoreContainer">
+    <EntitySet Name="TBLABOUT" EntityType="Self.TBLABOUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLADMIN" EntityType="Self.TBLADMIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLCERTIFICATES" EntityType="Self.TBLCERTIFICATES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLCONTACT" EntityType="Self.TBLCONTACT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLEDUCATION" EntityType="Self.TBLEDUCATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLEXPERIENCE" EntityType="Self.TBLEXPERIENCE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLHOBBY" EntityType="Self.TBLHOBBY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLSKILL" EntityType="Self.TBLSKILL" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

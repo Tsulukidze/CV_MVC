@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbCVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBLADMIN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLCERTIFICATES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DETAIL" Type="String" MaxLength="320" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLCONTACT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSurname" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Subject" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="TBLEDUCATION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SubHeader1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SubHeader2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="GPA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLEXPERIENCE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SubHeader" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLHOBBY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Detail1" Type="String" MaxLength="620" FixedLength="false" Unicode="false" />
+    <Property Name="Detail2" Type="String" MaxLength="620" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLSKILL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Skill" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DbCVEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBLADMIN" EntityType="Self.TBLADMIN" />
+    <EntitySet Name="TBLCERTIFICATES" EntityType="Self.TBLCERTIFICATES" />
+    <EntitySet Name="TBLCONTACT" EntityType="Self.TBLCONTACT" />
+    <EntitySet Name="TBLEDUCATION" EntityType="Self.TBLEDUCATION" />
+    <EntitySet Name="TBLEXPERIENCE" EntityType="Self.TBLEXPERIENCE" />
+    <EntitySet Name="TBLHOBBY" EntityType="Self.TBLHOBBY" />
+    <EntitySet Name="TBLSKILL" EntityType="Self.TBLSKILL" />
+    <EntitySet Name="TBLABOUT" EntityType="DbCVModel.TBLABOUT" />
+  </EntityContainer>
+  <EntityType Name="TBLABOUT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Adress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Photo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
