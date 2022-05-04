@@ -1,20 +1,21 @@
-﻿@using CV_MVC.Models.Entity
-@model List<TBLCONTACT>
-
+﻿
 <div class="resume-section-content">
-    <h2 class="mb-5">Contact</h2>
 
-    <label>Name Surname</label>
-    <input type="text" class="form-control" />
+    <form method="post">
+        <h2 class="mb-5">Contact</h2>
 
-    <label>Email</label>
-    <input type="text" class="form-control" />
+        <label>Name Surname</label>
+        <input type="text" class="form-control" name="NameSurname"/>
 
-    <label>Subject</label>
-    <input type="text" class="form-control" />
+        <label>Email</label>
+        <input type="text" class="form-control" name="Email"/>
 
-    <label>Message</label>
-    <input type="text" class="form-control" />
-    <br />
-    <button class="btn-info">Send Message</button>
+        <label>Subject</label>
+        <input type="text" class="form-control" name="Subject"/>
+
+        <label>Message</label>
+        <input type="text" class="form-control" name="Message"/>
+        <br />
+        <button class="btn-info">Send Message</button>
+    </form>
 </div>

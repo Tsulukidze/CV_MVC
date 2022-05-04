@@ -53,10 +53,19 @@ namespace CV_MVC.Controllers
             return PartialView(obj);
         }
 
+        [HttpGet]
         public PartialViewResult Contact()
         {
-            var obj = db.TBLCONTACT.ToList();
-            return PartialView(obj);
+            return PartialView();
+        }
+
+        [HttpPost]
+        public PartialViewResult Contact(TBLCONTACT obj)
+        {
+            obj.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
+            db.TBLCONTACT.Add(obj);
+            db.SaveChanges();
+            return PartialView();
         }
     }
 }

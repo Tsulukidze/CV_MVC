@@ -3,9 +3,11 @@
 
 <div class="resume-section-content">
     <h2 class="mb-5">Education</h2>
-    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-        @foreach (var item in Model)
-        {
+    @foreach (var item in Model)
+    {
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+
+            
             <div class="flex-grow-1">
                 <h3 class="mb-0">@item.Header</h3>
                 <div class="subheading mb-3">@item.SubHeader1</div>
@@ -13,7 +15,7 @@
                 <p>GPA: @item.GPA</p>
             </div>
             <div class="flex-shrink-0"><span class="text-primary">@item.Date</span></div>
-        }
-    </div>
-
+            
+        </div>
+    }
 </div>
