@@ -1,0 +1,34 @@
+﻿@model CV_MVC.Models.Entity.TBLEXPERIENCE
+@{
+    ViewBag.Title = "GetExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3>Edit Experience </h3>
+<br />
+<form method="post">
+
+    @Html.Label("Experience ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+ 
+    @Html.Label("Header ")
+    @Html.TextBoxFor(x => x.Header, new { @class = "form-control" })
+    
+    @Html.Label("SubHeader ")
+    @Html.TextBoxFor(x => x.SubHeader, new { @class = "form-control" })
+  
+    @Html.Label("Date ")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+
+    @Html.Label("Details ")
+    @Html.TextAreaFor(x => x.Details, new { @class = "form-control" })
+
+    <br />
+    <a href="/Experience/Index" class="btn btn-warning">Return to Home </a>
+    <button class="btn btn-success"> Update </button>
+
+</form>
+<br />
+
+

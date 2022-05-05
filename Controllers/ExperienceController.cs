@@ -30,5 +30,34 @@ namespace CV_MVC.Controllers
             repo.TAdd(obj);
             return RedirectToAction("Index");
         }
+
+        public ActionResult DeleteExperience(int id)
+        {
+            TBLEXPERIENCE t = repo.Find(x => x.ID == id);
+            repo.TDelete(t);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult GetExperience(int id)
+        {
+            TBLEXPERIENCE t = repo.Find(x => x.ID == id);
+            return View(t);
+        }
+
+        [HttpPost]
+        public ActionResult GetExperience(TBLEXPERIENCE obj)
+        {
+            TBLEXPERIENCE t = repo.Find(x => x.ID == obj.ID);
+            t.Header = obj.Header;
+            t.SubHeader = obj.SubHeader;
+            t.Date = obj.Date;
+            t.Details = obj.Details;
+            repo.TUpdate(t);
+            return RedirectToAction("Index");
+        }
+
+
     }
+
 }
