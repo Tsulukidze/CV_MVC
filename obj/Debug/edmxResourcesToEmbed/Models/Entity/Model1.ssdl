@@ -8,7 +8,7 @@
     <Property Name="Name" Type="varchar" MaxLength="50" />
     <Property Name="Surname" Type="varchar" MaxLength="50" />
     <Property Name="Adress" Type="varchar" MaxLength="150" />
-    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Phone" Type="varchar" MaxLength="40" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
     <Property Name="Details" Type="varchar(max)" />
     <Property Name="Photo" Type="varchar" MaxLength="150" />
@@ -74,6 +74,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Skill" Type="varchar" MaxLength="120" />
+    <Property Name="Percentage" Type="tinyint" />
   </EntityType>
   <EntityContainer Name="DbCVModelStoreContainer">
     <EntitySet Name="TBLABOUT" EntityType="Self.TBLABOUT" Schema="dbo" store:Type="Tables" />

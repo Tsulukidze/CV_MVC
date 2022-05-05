@@ -61,6 +61,7 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Skill" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="Percentage" Type="Byte" />
   </EntityType>
   <EntityContainer Name="DbCVEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="TBLADMIN" EntityType="Self.TBLADMIN" />
@@ -80,7 +81,7 @@
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Adress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Photo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />

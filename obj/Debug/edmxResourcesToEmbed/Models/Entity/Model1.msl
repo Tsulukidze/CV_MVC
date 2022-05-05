@@ -65,6 +65,7 @@
     <EntitySetMapping Name="TBLSKILL">
       <EntityTypeMapping TypeName="DbCVModel.TBLSKILL">
         <MappingFragment StoreEntitySet="TBLSKILL">
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Skill" ColumnName="Skill" />
         </MappingFragment>

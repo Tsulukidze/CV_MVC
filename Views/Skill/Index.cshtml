@@ -4,6 +4,8 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+@{ string color = "";}
+
 
 <!DOCTYPE html>
 <html>
@@ -17,36 +19,57 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Yetenek Listem</h3>
+                              
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table class="table table-bordered">
+                                <table class="table table-hover">
                                     <thead>
                                         <tr>
                                             <th style="width: 10px">#</th>
-                                            <th>Task</th>
+                                            <th>Skill</th>
                                             <th>Progress</th>
-                                            <th style="width: 40px">Label</th>
+                                            <th style="width: 40px">%</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                         @foreach (var item in Model)
                                         {
+                                            if (item.Percentage <= 60 && item.Percentage >= 0)
+                                            {
+                                                color = "bg-danger";
+                                            }
+                                            if (item.Percentage > 60 && item.Percentage <= 89)
+                                            {
+                                                color = "bg-warning";
+                                            }
+                                            if (item.Percentage > 89 && item.Percentage <= 100)
+                                            {
+                                                color = "bg-success";
+                                            }
                                             <tr>
                                                 <td>@item.ID</td>
                                                 <td>@item.Skill</td>
                                                 <td>
                                                     <div class="progress progress-xs">
-                                                        <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                                                        <div class="progress-bar @color" style="width: @item.Percentage%"></div>
                                                     </div>
                                                 </td>
-                                                <td><span class="badge bg-danger">55%</span></td>
+                                                <td>
+                                                    <span class="badge @color">@item.Percentage</span>
+                                                </td>
+                                                <td>
+                                                    <a href="/Skill/EditSkill/@item.ID" class="btn btn-outline-warning">Edit</a>
+                                                    <a class="btn btn-outline-danger" href="/Skill/DeleteSkill/@item.ID" >Delete</a>
+                                                </td>
                                             </tr>
                                         }
                                     </tbody>
                                 </table>
+
+                                <a href="/Skill/AddSkill" class="btn btn-outline-primary">Add New Skill</a>
                             </div>
                         </div>
                         <!-- /.card -->

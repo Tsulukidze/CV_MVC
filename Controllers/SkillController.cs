@@ -15,5 +15,43 @@ namespace CV_MVC.Controllers
             var skills = repo.List();
             return View(skills);
         }
+
+        [HttpGet]
+        public ActionResult AddSkill()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddSkill(TBLSKILL obj)
+        {
+            repo.TAdd(obj);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteSkill(int id)
+        {
+            TBLSKILL t = repo.Find(x => x.ID == id);
+            repo.TDelete(t);
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public ActionResult EditSkill(int id)
+        {
+            TBLSKILL t = repo.Find(x => x.ID == id);
+            return View(t);
+        }
+
+        [HttpPost]
+        public ActionResult EditSkill(TBLSKILL obj)
+        {
+            TBLSKILL t = repo.Find(x => x.ID == obj.ID);
+            t.Skill = obj.Skill;
+            t.Percentage = obj.Percentage;
+            repo.TUpdate(t);
+            return RedirectToAction("Index");
+        }
     }
 }

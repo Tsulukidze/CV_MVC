@@ -1,0 +1,27 @@
+﻿@model CV_MVC.Models.Entity.TBLSKILL
+
+@{
+    ViewBag.Title = "EditSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3>Edit Skill </h3>
+<br />
+<form method="post">
+
+
+    @Html.Label("Skill ")
+    @Html.TextBoxFor(x => x.Skill, new { @class = "form-control" })
+
+    @Html.Label("Percentage ")
+    @Html.TextBoxFor(x => x.Percentage, new { @class = "form-control" })
+
+    <br />
+    <a href="/Skill/Index" class="btn btn-warning">Return to Home </a>
+    <button class="btn btn-success"> Update </button>
+
+</form>
+<br />
+
+
