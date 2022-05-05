@@ -52,7 +52,7 @@
           <Property Name="Header" Type="varchar" MaxLength="150" />
           <Property Name="SubHeader1" Type="varchar" MaxLength="150" />
           <Property Name="SubHeader2" Type="varchar" MaxLength="150" />
-          <Property Name="GPA" Type="varchar" MaxLength="20" />
+          <Property Name="GPA" Type="varchar" MaxLength="10" />
           <Property Name="Date" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="TBLEXPERIENCE">
@@ -129,7 +129,7 @@
           <Property Name="Header" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="SubHeader1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="SubHeader2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="GPA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="GPA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="Date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBLEXPERIENCE">

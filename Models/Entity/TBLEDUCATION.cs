@@ -11,13 +11,17 @@ namespace CV_MVC.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLEDUCATION
     {
         public int ID { get; set; }
+        [Required(ErrorMessage ="Please enter Header")]
         public string Header { get; set; }
         public string SubHeader1 { get; set; }
         public string SubHeader2 { get; set; }
+
+        [StringLength(10,ErrorMessage ="GPA can't be more then 10 char")]
         public string GPA { get; set; }
         public string Date { get; set; }
     }

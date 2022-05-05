@@ -1,0 +1,94 @@
+[33mcommit 7d06a7a103fbf75b3f89e92cb93637cd98266b18[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Tsulukidze <temur.tsulukidze@gmail.com>
+Date:   Thu May 5 17:45:44 2022 +0300
+
+     Finished SkillController
+    added CRUD operations in SkillController
+    modified Admin's UI
+    successfully tested CRUD operations
+
+[33mcommit c0e1def5d3fafcbeab9f0325a9ca7cd3efd8ea16[m
+Author: Tsulukidze <temur.tsulukidze@gmail.com>
+Date:   Thu May 5 13:58:46 2022 +0300
+
+    Created SkillController
+    Updated database
+    in TBLSKILL inserted column named percentage which indicates level of a skill
+    created index page for skillController
+    index.cshtml will be modified.
+
+[33mcommit b24531bcd1462d54ae1b3646ba55bcc33dbc1ec5[m
+Author: Tsulukidze <temur.tsulukidze@gmail.com>
+Date:   Thu May 5 13:14:10 2022 +0300
+
+    Finishing Repository design pettern
+    in GenericRepository.cshtml  added new method (Find)
+    Find method is used in editing experiences
+    GetExperience()  has two attributes httpget and httppost
+    GetExperience.cshtml also uses _AdminLayout.
+
+[33mcommit 01e15b0fd902c7b0bc12c9b3862032b16e85fa38[m
+Author: Tsulukidze <temur.tsulukidze@gmail.com>
+Date:   Wed May 4 21:59:12 2022 +0300
+
+    Added Experience Controller
+    this controller controlls CRUD operations of experiences in AdminLayout
+    created AddExperience method which has post and get actions
+    created and modified AddExperiene.cshtml
+
+[33mcommit 795474c68a3a574ce7b4935d1f588f9145d66e4d[m
+Author: Tsulukidze <temur.tsulukidze@gmail.com>
+Date:   Wed May 4 20:33:55 2022 +0300
+
+    Repository Design Pattern
+    Created Generic Repository class where we can do CRUD proccesses
+    every Table from DBCV has relationship with GenericRepository.cs
+    You can see new files under Repositories folder
+    for example : AboutRepository.cs
+
+[33mcommit c25b17a859d871e42e4b9a1f0f7ebc682e121260[m
+Author: Tsulukidze <temur.tsulukidze@gmail.com>
+Date:   Wed May 4 19:48:44 2022 +0300
+
+    Added Admin LTE 3.0.4 theme
+    created _AdminLayout.cshtml
+    modified left menu
+    modified _AdminLayout.cshtml
+    Created about controller  in controller's folder
+
+[33mcommit 546fca12e8a71bedc033e81b0e1f73bd3642426f[m
+Author: Tsulukidze <temur.tsulukidze@gmail.com>
+Date:   Wed May 4 18:58:50 2022 +0300
+
+    Added HTTPGET and HTTPPOST attributes
+    in default controller I have added get and post attributes to contact page
+    PartialviewResult Contact has been modified.
+
+[33mcommit 0bb66f03a0c3f04494692dea410619fe50ac54fb[m
+Merge: e909613 af067cd
+Author: Tsulukidze <temur.tsulukidze@gmail.com>
+Date:   Mon May 2 21:07:13 2022 +0300
+
+    Merge branch 'master' of https://github.com/Tsulukidze/CV_MVC
+
+[33mcommit e90961377debb4eadea47164cd9bc87d1e34aa8d[m
+Author: Tsulukidze <temur.tsulukidze@gmail.com>
+Date:   Mon May 2 20:58:34 2022 +0300
+
+     Adding PartialViews to Default Controller
+
+[33mcommit af067cd68a897f775eece6b10785a43a9f722416[m
+Author: Tsulukidze <62519788+Tsulukidze@users.noreply.github.com>
+Date:   Mon May 2 16:57:06 2022 +0300
+
+    Create README.md
+
+[33mcommit f65c3e6d405f748a8affff13c7ed2dd1e3f6b9c3[m
+Author: Tsulukidze <temur.tsulukidze@gmail.com>
+Date:   Mon May 2 16:48:01 2022 +0300
+
+    First Stage of My Cv Project
+    created UserLayout
+    created deffault controller
+    make database connection using Entity-Framework (DB First)
+    added bootstrap files
