@@ -17,10 +17,12 @@ namespace CV_MVC.Models.Entity
     {
         public int ID { get; set; }
 
-        [Required(ErrorMessage ="This area can't be empty")]
+        [Required(ErrorMessage = "This area can't be empty")]
         public string Project { get; set; }
+
         [Required(ErrorMessage = "This area can't be empty")]
         public string Detail { get; set; }
+
         [Required(ErrorMessage = "This area can't be empty")]
         public string Link { get; set; }
     }

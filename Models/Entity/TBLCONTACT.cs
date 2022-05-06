@@ -11,12 +11,15 @@ namespace CV_MVC.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLCONTACT
     {
         public int ID { get; set; }
         public string NameSurname { get; set; }
+      
         public string Email { get; set; }
+       
         public string Subject { get; set; }
         public string Message { get; set; }
         public Nullable<System.DateTime> Date { get; set; }

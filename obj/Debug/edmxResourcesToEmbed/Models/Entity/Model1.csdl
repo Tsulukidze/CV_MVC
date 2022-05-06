@@ -24,7 +24,7 @@
     <Property Name="NameSurname" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
     <Property Name="Subject" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
-    <Property Name="Message" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="Date" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="TBLEDUCATION">

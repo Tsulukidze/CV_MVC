@@ -20,6 +20,8 @@ namespace CV_MVC.Models.Entity
         public string Header { get; set; }
         public string SubHeader1 { get; set; }
         public string SubHeader2 { get; set; }
+
+        [StringLength(10)]
         public string GPA { get; set; }
         public string Date { get; set; }
     }

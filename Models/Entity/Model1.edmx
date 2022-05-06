@@ -42,7 +42,7 @@
           <Property Name="NameSurname" Type="varchar" MaxLength="120" />
           <Property Name="Email" Type="varchar" MaxLength="80" />
           <Property Name="Subject" Type="varchar" MaxLength="120" />
-          <Property Name="Message" Type="varchar" MaxLength="100" />
+          <Property Name="Message" Type="nvarchar" MaxLength="200" />
           <Property Name="Date" Type="date" />
         </EntityType>
         <EntityType Name="TBLEDUCATION">
@@ -130,7 +130,7 @@
           <Property Name="NameSurname" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
           <Property Name="Subject" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
-          <Property Name="Message" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Message" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Date" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="TBLEDUCATION">
