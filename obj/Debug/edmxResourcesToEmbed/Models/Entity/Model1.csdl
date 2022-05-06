@@ -73,6 +73,7 @@
     <EntitySet Name="TBLHOBBY" EntityType="Self.TBLHOBBY" />
     <EntitySet Name="TBLSKILL" EntityType="Self.TBLSKILL" />
     <EntitySet Name="TBLABOUT" EntityType="DbCVModel.TBLABOUT" />
+    <EntitySet Name="TBLPROJECT" EntityType="DbCVModel.TBLPROJECT" />
   </EntityContainer>
   <EntityType Name="TBLABOUT">
     <Key>
@@ -86,5 +87,14 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Photo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLPROJECT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Project" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Detail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Link" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

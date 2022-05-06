@@ -1,0 +1,33 @@
+﻿@model CV_MVC.Models.Entity.TBLPROJECT
+@{
+    ViewBag.Title = "GetProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3>Edit Project </h3>
+<br />
+<form method="post">
+
+    @Html.Label("Project ")
+    @Html.TextBoxFor(x => x.Project, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Project, "", new { @style = "color:red" })
+    <br />
+
+    @Html.Label("Detail")
+    @Html.TextAreaFor(x => x.Detail, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Detail, "", new { @style = "color:red" })
+
+    <br />
+
+    @Html.Label("Link")
+    @Html.TextBoxFor(x => x.Link, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Link, "", new { @style = "color:red" })
+    <br />
+
+    <br />
+    <a href="/Project/Index" class="btn btn-warning">Return to Home </a>
+    <button class="btn btn-success"> Update </button>
+
+</form>
+<br />

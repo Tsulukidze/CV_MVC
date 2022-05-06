@@ -33,13 +33,7 @@ namespace CV_MVC.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult DeleteExperience(int id)
-        {
-            TBLEXPERIENCE t = repo.Find(x => x.ID == id);
-            repo.TDelete(t);
-            return RedirectToAction("Index");
-        }
-
+       
         [HttpGet]
         public ActionResult GetExperience(int id)
         {
@@ -58,6 +52,13 @@ namespace CV_MVC.Controllers
             t.Date = obj.Date;
             t.Details = obj.Details;
             repo.TUpdate(t);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteExperience(int id)
+        {
+            TBLEXPERIENCE t = repo.Find(x => x.ID == id);
+            repo.TDelete(t);
             return RedirectToAction("Index");
         }
 

@@ -41,9 +41,9 @@ namespace CV_MVC.Controllers
             return PartialView(skill);
         }
 
-        public PartialViewResult Hobby()
+        public PartialViewResult Project()
         {
-            var obj = db.TBLHOBBY.ToList();
+            var obj = db.TBLPROJECT.ToList();
             return PartialView(obj);
         }
 

@@ -1,0 +1,17 @@
+﻿@using CV_MVC.Models.Entity
+@model List<TBLPROJECT>
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Projects</h2>
+    @foreach (var item in Model)
+    {
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0">@item.Project</h3>
+                <div class="subheading mb-3"><a href="@item.Link" target="_blank">@item.Link</a></div>
+                <p>@item.Detail</p>
+            </div>
+        </div>
+    }
+</div>

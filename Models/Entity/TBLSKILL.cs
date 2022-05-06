@@ -16,7 +16,7 @@ namespace CV_MVC.Models.Entity
     public partial class TBLSKILL
     {
         public int ID { get; set; }
-        [Required(ErrorMessage ="This area can't be empty")]
+        [Required(ErrorMessage = "This area can't be empty")]
         public string Skill { get; set; }
         [Required(ErrorMessage = "This area can't be empty")]
         public Nullable<byte> Percentage { get; set; }

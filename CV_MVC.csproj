@@ -136,6 +136,7 @@
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -176,6 +177,9 @@
     <Compile Include="Models\Entity\TBLHOBBY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\TBLPROJECT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\TBLSKILL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -187,6 +191,7 @@
     <Compile Include="Repositories\ExperienceRepository.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\HobbyRepository.cs" />
+    <Compile Include="Repositories\ProjectRepository.cs" />
     <Compile Include="Repositories\SkillRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2319,6 +2324,7 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="startbootstrap-resume-gh-pages\assets\img\favicon.ico" />
     <Content Include="startbootstrap-resume-gh-pages\assets\img\profile.jpg" />
+    <Content Include="startbootstrap-resume-gh-pages\assets\img\tt.jpg" />
     <Content Include="startbootstrap-resume-gh-pages\css\styles.css" />
     <Content Include="startbootstrap-resume-gh-pages\index.html" />
     <Content Include="startbootstrap-resume-gh-pages\js\scripts.js" />
@@ -2341,7 +2347,6 @@
     <Content Include="Views\Default\About.cshtml" />
     <Content Include="Views\Default\Education.cshtml" />
     <Content Include="Views\Default\Skill.cshtml" />
-    <Content Include="Views\Default\Hobby.cshtml" />
     <Content Include="Views\Default\Certificates.cshtml" />
     <Content Include="Views\Default\Contact.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
@@ -2358,6 +2363,10 @@
     <Content Include="Views\Certificates\Index.cshtml" />
     <Content Include="Views\Certificates\GetCertificate.cshtml" />
     <Content Include="Views\Certificates\AddCertificate.cshtml" />
+    <Content Include="Views\Project\Index.cshtml" />
+    <Content Include="Views\Project\AddProject.cshtml" />
+    <Content Include="Views\Project\GetProject.cshtml" />
+    <Content Include="Views\Default\Project.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

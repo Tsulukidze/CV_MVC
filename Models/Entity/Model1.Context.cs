@@ -33,5 +33,6 @@ namespace CV_MVC.Models.Entity
         public virtual DbSet<TBLHOBBY> TBLHOBBY { get; set; }
         public virtual DbSet<TBLSKILL> TBLSKILL { get; set; }
         public virtual DbSet<TBLABOUT> TBLABOUT { get; set; }
+        public virtual DbSet<TBLPROJECT> TBLPROJECT { get; set; }
     }
 }

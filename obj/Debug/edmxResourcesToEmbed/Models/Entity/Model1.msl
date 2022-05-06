@@ -86,5 +86,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TBLPROJECT">
+      <EntityTypeMapping TypeName="DbCVModel.TBLPROJECT">
+        <MappingFragment StoreEntitySet="TBLPROJECT">
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

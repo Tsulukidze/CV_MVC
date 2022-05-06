@@ -69,6 +69,15 @@
     <Property Name="Detail1" Type="varchar" MaxLength="620" />
     <Property Name="Detail2" Type="varchar" MaxLength="620" />
   </EntityType>
+  <EntityType Name="TBLPROJECT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Project" Type="varchar" MaxLength="150" />
+    <Property Name="Detail" Type="varchar" MaxLength="250" />
+    <Property Name="Link" Type="varchar" MaxLength="150" />
+  </EntityType>
   <EntityType Name="TBLSKILL">
     <Key>
       <PropertyRef Name="ID" />
@@ -85,6 +94,7 @@
     <EntitySet Name="TBLEDUCATION" EntityType="Self.TBLEDUCATION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLEXPERIENCE" EntityType="Self.TBLEXPERIENCE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLHOBBY" EntityType="Self.TBLHOBBY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLPROJECT" EntityType="Self.TBLPROJECT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLSKILL" EntityType="Self.TBLSKILL" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

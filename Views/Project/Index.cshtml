@@ -1,0 +1,40 @@
+﻿@using CV_MVC.Models.Entity
+@model List <TBLPROJECT>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h2>List of Projects</h2>
+<br />
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th style="width: 10px">#</th>
+            <th>Project</th>
+            <th>Details</th>
+            <th>Link</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.ID</th>
+                <th>@item.Project</th>
+                <th>@item.Detail</th>
+                <th class="subheading mb-3"><a href="@item.Link" target="_blank">@item.Link</a></th>
+                <th><a href="/Project/GetProject/@item.ID" class="btn btn-outline-success"> Edit </a></th>
+                <th><a href="/Project/DeleteProject/@item.ID" class="btn btn-outline-danger"> Delete </a></th>
+
+                <th></th>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Project/AddProject" class="btn btn-outline-primary">Add new Project</a>
+
+

@@ -74,6 +74,15 @@
           <Property Name="Detail1" Type="varchar" MaxLength="620" />
           <Property Name="Detail2" Type="varchar" MaxLength="620" />
         </EntityType>
+        <EntityType Name="TBLPROJECT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Project" Type="varchar" MaxLength="150" />
+          <Property Name="Detail" Type="varchar" MaxLength="250" />
+          <Property Name="Link" Type="varchar" MaxLength="150" />
+        </EntityType>
         <EntityType Name="TBLSKILL">
           <Key>
             <PropertyRef Name="ID" />
@@ -90,6 +99,7 @@
           <EntitySet Name="TBLEDUCATION" EntityType="Self.TBLEDUCATION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLEXPERIENCE" EntityType="Self.TBLEXPERIENCE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLHOBBY" EntityType="Self.TBLHOBBY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLPROJECT" EntityType="Self.TBLPROJECT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLSKILL" EntityType="Self.TBLSKILL" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -169,6 +179,7 @@
           <EntitySet Name="TBLHOBBY" EntityType="Self.TBLHOBBY" />
           <EntitySet Name="TBLSKILL" EntityType="Self.TBLSKILL" />
           <EntitySet Name="TBLABOUT" EntityType="DbCVModel.TBLABOUT" />
+          <EntitySet Name="TBLPROJECT" EntityType="DbCVModel.TBLPROJECT" />
         </EntityContainer>
         <EntityType Name="TBLABOUT">
           <Key>
@@ -182,6 +193,15 @@
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Photo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLPROJECT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Project" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Detail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -270,6 +290,16 @@
                 <ScalarProperty Name="Adress" ColumnName="Adress" />
                 <ScalarProperty Name="Surname" ColumnName="Surname" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLPROJECT">
+            <EntityTypeMapping TypeName="DbCVModel.TBLPROJECT">
+              <MappingFragment StoreEntitySet="TBLPROJECT">
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Detail" ColumnName="Detail" />
+                <ScalarProperty Name="Project" ColumnName="Project" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

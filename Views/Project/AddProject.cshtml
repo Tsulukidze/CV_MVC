@@ -1,0 +1,33 @@
+﻿@model CV_MVC.Models.Entity.TBLPROJECT
+@{
+    ViewBag.Title = "AddProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3>Add New Project </h3>
+<br />
+<form method="post">
+
+    <input type="text" name="Project" class="form-control"
+           placeholder="Project..." />
+    @Html.ValidationMessageFor(x => x.Project, "", new { @style = "color:red" })
+    <br />
+
+    <br />
+    <textarea name="Detail" class="form-control" rows="6"
+              placeholder="Detail..."></textarea>
+    @Html.ValidationMessageFor(x => x.Detail, "", new { @style = "color:red" })
+    <br />
+
+    <input type="text" name="Link" class="form-control"
+           placeholder="Link..." />
+    @Html.ValidationMessageFor(x => x.Link, "", new { @style = "color:red" })
+    <br />
+
+    <a href="/Project/Index" class="btn btn-warning">Return to Home </a>
+    <button class="btn btn-success"> Save </button>
+
+</form>
+<br />
+

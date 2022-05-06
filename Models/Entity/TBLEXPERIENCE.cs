@@ -16,11 +16,10 @@ namespace CV_MVC.Models.Entity
     public partial class TBLEXPERIENCE
     {
         public int ID { get; set; }
-        [Required(ErrorMessage ="This area can't be empty")]
+        [Required(ErrorMessage = "This area can't be empty")]
         public string Header { get; set; }
         public string SubHeader { get; set; }
         public string Details { get; set; }
-
         [Required(ErrorMessage = "This area can't be empty")]
         public string Date { get; set; }
     }
