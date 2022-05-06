@@ -13,10 +13,11 @@
 
     @Html.Label("Skill ")
     @Html.TextBoxFor(x => x.Skill, new { @class = "form-control" })
-
+    @Html.ValidationMessageFor(x => x.Skill, "", new { @style = "color:red" })
+    <br />
     @Html.Label("Percentage ")
     @Html.TextBoxFor(x => x.Percentage, new { @class = "form-control" })
-
+    @Html.ValidationMessageFor(x => x.Percentage, "", new { @style = "color:red" })
     <br />
     <a href="/Skill/Index" class="btn btn-warning">Return to Home </a>
     <button class="btn btn-success"> Update </button>

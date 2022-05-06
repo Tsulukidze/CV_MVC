@@ -11,10 +11,13 @@ namespace CV_MVC.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLCERTIFICATES
     {
         public int ID { get; set; }
+        [Required(ErrorMessage ="This area can't be empty")]
         public string DETAIL { get; set; }
+        public string Date { get; set; }
     }
 }

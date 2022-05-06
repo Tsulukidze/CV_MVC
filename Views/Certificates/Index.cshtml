@@ -1,0 +1,62 @@
+﻿@using CV_MVC.Models.Entity
+@model List<TBLCERTIFICATES> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- /.col -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header p-2">
+                            
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                            
+                                <div class="tab-pane" id="timeline">
+                                    <!-- The timeline -->
+                                    <div class="timeline timeline-inverse">
+                                        <!-- timeline time label -->
+                                        @foreach (var item in Model)
+                                        {
+                                        <div class="time-label">
+                                            <span class="bg-success">
+                                                @item.Date
+                                            </span>
+                                        </div>
+                                        <!-- /.timeline-label -->
+                                        <!-- timeline item -->
+                                        <div>
+                                            <i class="fas fa-comment bg-secondary"></i>
+                                            <div class="timeline-item">
+                                                <div class="timeline-body">
+                                                    @item.DETAIL
+                                                </div>
+                                                <div class="timeline-footer">
+                                                    <a href="/Certificates/GetCertificate/@item.ID" class="btn btn-warning btn-sm">Edit</a>
+                                                    <a href="/Certificates/DeleteCertificate/@item.ID" class="btn btn-danger btn-sm">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        }
+                                    </div>
+                                    <a href="/Certificates/AddCertificate" class="btn btn-outline-success">Add New Certificate</a>
+                                </div>
+                            </div>
+                        </div><!-- /.card-body -->
+                    </div>
+                    <!-- /.nav-tabs-custom -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+    </section>
+</body>
+</html>

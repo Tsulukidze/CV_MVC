@@ -27,6 +27,8 @@ namespace CV_MVC.Controllers
         [HttpPost]
         public ActionResult AddExperience(TBLEXPERIENCE obj)
         {
+            if (!ModelState.IsValid)
+                return View("AddExperience");
             repo.TAdd(obj);
             return RedirectToAction("Index");
         }
@@ -48,6 +50,8 @@ namespace CV_MVC.Controllers
         [HttpPost]
         public ActionResult GetExperience(TBLEXPERIENCE obj)
         {
+            if (!ModelState.IsValid)
+                return View("GetExperience");
             TBLEXPERIENCE t = repo.Find(x => x.ID == obj.ID);
             t.Header = obj.Header;
             t.SubHeader = obj.SubHeader;

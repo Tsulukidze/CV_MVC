@@ -9,17 +9,18 @@
 <br />
 <form method="post">
 
-    @Html.Label("Experience ID")
-    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
- 
     @Html.Label("Header ")
     @Html.TextBoxFor(x => x.Header, new { @class = "form-control" })
-    
+    @Html.ValidationMessageFor(x => x.Header, "", new { @style = "color:red" })
+    <br />
+
     @Html.Label("SubHeader ")
     @Html.TextBoxFor(x => x.SubHeader, new { @class = "form-control" })
-  
+
     @Html.Label("Date ")
     @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Date, "", new { @style = "color:red" })
+    <br />
 
     @Html.Label("Details ")
     @Html.TextAreaFor(x => x.Details, new { @class = "form-control" })

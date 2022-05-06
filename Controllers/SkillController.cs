@@ -25,6 +25,8 @@ namespace CV_MVC.Controllers
         [HttpPost]
         public ActionResult AddSkill(TBLSKILL obj)
         {
+            if (!ModelState.IsValid)
+                return View("AddSkill");
             repo.TAdd(obj);
             return RedirectToAction("Index");
         }
@@ -47,6 +49,8 @@ namespace CV_MVC.Controllers
         [HttpPost]
         public ActionResult EditSkill(TBLSKILL obj)
         {
+            if (!ModelState.IsValid)
+                return View("EditSkill");
             TBLSKILL t = repo.Find(x => x.ID == obj.ID);
             t.Skill = obj.Skill;
             t.Percentage = obj.Percentage;

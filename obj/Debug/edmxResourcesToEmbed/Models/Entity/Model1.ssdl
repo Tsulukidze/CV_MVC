@@ -27,6 +27,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DETAIL" Type="varchar" MaxLength="320" />
+    <Property Name="Date" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="TBLCONTACT">
     <Key>

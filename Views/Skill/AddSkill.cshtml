@@ -1,4 +1,4 @@
-﻿
+﻿@model CV_MVC.Models.Entity.TBLSKILL
 @{
     ViewBag.Title = "AddSkill";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -12,11 +12,14 @@
 
     <input type="text" name="Skill" class="form-control"
            placeholder="Skill..." />
+    @Html.ValidationMessageFor(x => x.Skill, "", new { @style = "color:red" })
     <br />
     <input type="text" name="Percentage" class="form-control"
            placeholder="Percentage..." />
+    @Html.ValidationMessageFor(x => x.Percentage, "", new { @style = "color:red" })
+
     <br />
-    
+
     <a href="/Skill/Index" class="btn btn-warning">Previous Page </a>
     <button class="btn btn-success"> Save </button>
 

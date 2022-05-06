@@ -32,6 +32,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DETAIL" Type="varchar" MaxLength="320" />
+          <Property Name="Date" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TBLCONTACT">
           <Key>
@@ -109,6 +110,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DETAIL" Type="String" MaxLength="320" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBLCONTACT">
           <Key>
@@ -199,6 +201,7 @@
           <EntitySetMapping Name="TBLCERTIFICATES">
             <EntityTypeMapping TypeName="DbCVModel.TBLCERTIFICATES">
               <MappingFragment StoreEntitySet="TBLCERTIFICATES">
+                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="DETAIL" ColumnName="DETAIL" />
               </MappingFragment>

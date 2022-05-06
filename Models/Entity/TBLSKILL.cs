@@ -11,11 +11,14 @@ namespace CV_MVC.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLSKILL
     {
         public int ID { get; set; }
+        [Required(ErrorMessage ="This area can't be empty")]
         public string Skill { get; set; }
+        [Required(ErrorMessage = "This area can't be empty")]
         public Nullable<byte> Percentage { get; set; }
     }
 }

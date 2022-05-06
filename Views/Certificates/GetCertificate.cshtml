@@ -1,0 +1,27 @@
+﻿@model CV_MVC.Models.Entity.TBLCERTIFICATES 
+@{
+    ViewBag.Title = "GetCertificate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3>Edit  Certificate </h3>
+<br />
+<form method="post">
+
+    @Html.Label("Details")
+    @Html.TextBoxFor(x => x.DETAIL, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.DETAIL, "", new { @style = "color:red" })
+    <br />
+
+    @Html.Label("Date")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+
+    <a href="/Certificates/Index" class="btn btn-warning">Previous Page </a>
+    <button class="btn btn-success"> Save </button>
+
+</form>
+<br />
+
+

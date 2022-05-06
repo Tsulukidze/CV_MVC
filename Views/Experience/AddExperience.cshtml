@@ -1,4 +1,4 @@
-﻿
+﻿@model CV_MVC.Models.Entity.TBLEXPERIENCE
 @{
     ViewBag.Title = "AddExperience";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -11,6 +11,7 @@
 
     <input type="text" name="Header" class="form-control"
            placeholder="Header..." />
+    @Html.ValidationMessageFor(x => x.Header, "", new { @style = "color:red" })
     <br />
     <input type="text" name="SubHeader" class="form-control"
            placeholder="SubHeader..." />
@@ -20,6 +21,7 @@
     <br />
     <input type="text" name="Date" class="form-control"
            placeholder="Date..." />
+    @Html.ValidationMessageFor(x => x.Date, "", new { @style = "color:red" })
     <br />
     <a href="/Experience/Index" class="btn btn-warning">Return to Home </a>
     <button class="btn btn-success"> Save </button>
